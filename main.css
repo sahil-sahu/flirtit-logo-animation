@@ -1,0 +1,234 @@
+:root {
+    --main: #FFA1B4;
+  }
+  
+
+body{
+
+    margin: 0px;
+
+}
+
+
+
+
+.animation{
+
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.animation .rainbow{
+
+    background-image: url("colorpatch.png");
+    background-size: 20rem;
+    background-repeat: repeat;
+    width:100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: maskingCircle 2s forwards ease-in-out;
+    background-position: center;
+    z-index: 10;
+    
+}
+
+@keyframes maskingCircle {
+    
+    from{
+        border-radius: 100%;
+        height: 200vh;
+        width: 200vh;
+        background-size: 20rem;
+    }
+    to{
+        border-radius: 100%;
+        height: 25vh;
+        width: 25vh;
+        background-size: 12rem;
+    }
+    
+}
+
+.animation .ring{
+    
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30vh;
+    height: 30vh;
+    background: var(--main);
+    border-radius: 100%;
+    
+}
+
+.animation .arrow .line{
+    
+    height: 20vh;
+    width: 3.5vh;
+    background-color: var(--main);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: arrow-up .5s ease-in-out 2s forwards;
+    transform-origin: center;
+    border-top-left-radius: 600rem;
+    border-top-right-radius: 600rem;
+    
+}
+
+@keyframes arrow-up {
+    
+    to{
+        
+        transform: translate(-50%,-163%);
+        
+    }
+    
+}
+
+.animation .arrow .angled{
+    
+    height: 12vh;
+    width: 3vh;
+    background-color: var(--main);
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-265%);
+    opacity: 0;
+    border-bottom-left-radius: 600rem;
+    border-bottom-right-radius: 600rem;
+    /* background-color: var(--main); */
+    
+    
+}
+
+.animation .arrow .angled1{
+    transform-origin: top left;
+    animation: angled1 0.5s ease-in 2.5s forwards;
+}
+.animation .arrow .angled2{
+    animation: angled2 0.5s ease-in 2.5s forwards;
+    transform-origin: top right;
+}
+
+@keyframes angled1 {
+    from{
+        opacity: 100;
+    }
+    to{
+        transform: translate(-50%,-265%) rotate(45deg);
+        opacity: 100;
+    }
+}
+@keyframes angled2 {
+    from{
+        opacity: 100;
+    }
+    to{
+        transform: translate(-50%,-265%) rotate(-45deg);
+        opacity: 100;
+    }
+}
+
+.animation .arrow .dandi{
+    
+    animation: dandi .5s 3s ease-out forwards;
+    background-color: var(--main);
+    height: 12vh;
+    width: 3vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-225%);
+    transform-origin: center;
+    opacity: 0;
+    
+}
+
+@keyframes dandi {
+    from{
+        opacity: 100;
+    }
+    to{
+        
+        transform: translate(-50%,-225%) rotate(90deg);
+        opacity: 100;
+
+    }
+
+}
+
+.animation .male .arrow{
+
+    animation: tilt60 .5s ease-in-out 3.5s forwards;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+@keyframes tilt60 {
+
+    to{
+
+        transform: rotate(60deg);
+
+    }
+}
+.animation .female .arrow{
+
+    animation: tilt300 1.5s ease-in-out 3.5s forwards;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+@keyframes tilt300 {
+    from{
+
+        transform: rotate(0deg);
+
+    }
+
+    to{
+
+        transform: rotate(300deg);
+
+    }
+}
+.animation .gay .arrow{
+
+    animation: tilt180 1s ease-in-out 3.5s forwards;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+@keyframes tilt180 {
+    to{
+
+        transform: rotate(180deg);
+
+    }
+}
+
+.animation .gay .line{
+
+    height: 17.5vh;
+    border-radius: 0px;
+
+}
