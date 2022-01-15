@@ -1,11 +1,13 @@
 :root {
     --main: #FFA1B4;
+    --cyan: #00D2D2;
   }
   
 
 body{
 
     margin: 0px;
+    transition: 0.5s ease-in-out;
 
 }
 
@@ -30,21 +32,36 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    animation: maskingCircle 2s forwards ease-in-out;
-    background-position: center;
+    animation: maskingCircle 3s forwards ease-in-out;
+    /* background-position: center; */
     z-index: 10;
     
 }
 
 @keyframes maskingCircle {
     
-    from{
+    0%{
         border-radius: 100%;
-        height: 200vh;
-        width: 200vh;
+        height: 200vw;
+        width: 200vw;
         background-size: 20rem;
+        background-position: 15%,15%;
     }
-    to{
+    16%{
+        border-radius: 100%;
+        height: 200vw;
+        width: 200vw;
+        background-size: 20rem;
+        background-position: -15%,-15%;
+    }
+    33%{
+        border-radius: 100%;
+        height: 200vw;
+        width: 200vw;
+        background-size: 20rem;
+        background-position: 0%, 0%;
+    }
+   100% {
         border-radius: 100%;
         height: 25vh;
         width: 25vh;
@@ -67,16 +84,18 @@ body{
     
 }
 
+
+
 .animation .arrow .line{
     
     height: 20vh;
     width: 3.5vh;
     background-color: var(--main);
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    animation: arrow-up .5s ease-in-out 2s forwards;
+    animation: arrow-up .5s ease-in-out 3s forwards;
     transform-origin: center;
     border-top-left-radius: 600rem;
     border-top-right-radius: 600rem;
@@ -113,10 +132,10 @@ body{
 
 .animation .arrow .angled1{
     transform-origin: top left;
-    animation: angled1 0.5s ease-in 2.5s forwards;
+    animation: angled1 0.5s ease-in 3.5s forwards;
 }
 .animation .arrow .angled2{
-    animation: angled2 0.5s ease-in 2.5s forwards;
+    animation: angled2 0.5s ease-in 3.5s forwards;
     transform-origin: top right;
 }
 
@@ -141,7 +160,7 @@ body{
 
 .animation .arrow .dandi{
     
-    animation: dandi .5s 3s ease-out forwards;
+    animation: dandi .5s 4s ease-out forwards;
     background-color: var(--main);
     height: 12vh;
     width: 3vh;
@@ -169,7 +188,7 @@ body{
 
 .animation .male .arrow{
 
-    animation: tilt60 .5s ease-in-out 3.5s forwards;
+    animation: tilt60 .5s ease-in-out 4.5s forwards;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -187,7 +206,7 @@ body{
 }
 .animation .female .arrow{
 
-    animation: tilt300 1.5s ease-in-out 3.5s forwards;
+    animation: tilt300 1.5s ease-in-out 4.5s forwards;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -210,7 +229,7 @@ body{
 }
 .animation .gay .arrow{
 
-    animation: tilt180 1s ease-in-out 3.5s forwards;
+    animation: tilt180 1s ease-in-out 4.5s forwards;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -232,3 +251,388 @@ body{
     border-radius: 0px;
 
 }
+
+@media (max-aspect-ratio : 1/1){
+
+
+    .animation .rainbow{
+
+        background-image: url("colorpatch.png");
+        background-size: 12rem;
+        background-repeat: repeat;
+        width:100%;
+        height: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation: maskingCircle 3s forwards ease-in-out;
+        z-index: 10;
+        
+    }
+
+    @keyframes maskingCircle {
+        
+        0%{
+            border-radius: 100%;
+            height: 200vh;
+            width: 200vh;
+            background-size: 12rem;
+            background-position: 15%,15%;
+        }
+        16%{
+            border-radius: 100%;
+            height: 200vh;
+            width: 200vh;
+            background-size: 12rem;
+            background-position: -15%,-15%;
+        }
+        33%{
+            border-radius: 100%;
+            height: 200vh;
+            width: 200vh;
+            background-size: 12rem;
+            background-position: 0%, 0%;
+        }
+    100% {
+            border-radius: 100%;
+            height: 25vw;
+            width: 25vw;
+            background-size: 7rem;
+        }
+        
+    }
+    
+    .animation .ring{
+        
+        content: "";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 30vw;
+        height: 30vw;
+        background: var(--main);
+        border-radius: 100%;
+        
+    }
+    
+    
+    
+    .animation .arrow .line{
+        
+        height: 20vw;
+        width: 3.5vw;
+        background-color: var(--main);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        animation: arrow-up .5s ease-in-out 2s forwards 1s;
+        transform-origin: center;
+        border-top-left-radius: 600rem;
+        border-top-right-radius: 600rem;
+        
+    }
+    
+    @keyframes arrow-up {
+        
+        to{
+            
+            transform: translate(-50%,-163%);
+            
+        }
+        
+    }
+    
+    .animation .arrow .angled{
+        
+        height: 12vw;
+        width: 3vw;
+        background-color: var(--main);
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-265%);
+        opacity: 0;
+        border-bottom-left-radius: 600rem;
+        border-bottom-right-radius: 600rem;
+        /* background-color: var(--main); */
+        
+        
+    }
+    
+    .animation .arrow .angled1{
+        transform-origin: top left;
+        animation: angled1 0.5s ease-in 3.5s forwards;
+    }
+    .animation .arrow .angled2{
+        animation: angled2 0.5s ease-in 3.5s forwards;
+        transform-origin: top right;
+    }
+    
+    @keyframes angled1 {
+        from{
+            opacity: 100;
+        }
+        to{
+            transform: translate(-50%,-265%) rotate(45deg);
+            opacity: 100;
+        }
+    }
+    @keyframes angled2 {
+        from{
+            opacity: 100;
+        }
+        to{
+            transform: translate(-50%,-265%) rotate(-45deg);
+            opacity: 100;
+        }
+    }
+    
+    .animation .arrow .dandi{
+        
+        animation: dandi .5s 4s ease-out forwards;
+        background-color: var(--main);
+        height: 12vw;
+        width: 3vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-225%);
+        transform-origin: center;
+        opacity: 0;
+        
+    }
+    
+    @keyframes dandi {
+        from{
+            opacity: 100;
+        }
+        to{
+            
+            transform: translate(-50%,-225%) rotate(90deg);
+            opacity: 100;
+    
+        }
+    
+    }
+    
+    .animation .male .arrow{
+    
+        animation: tilt60 .5s ease-in-out 4.5s forwards;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    
+    }
+    
+    @keyframes tilt60 {
+    
+        to{
+    
+            transform: rotate(60deg);
+    
+        }
+    }
+    .animation .female .arrow{
+    
+        animation: tilt300 1.5s ease-in-out 4.5s forwards;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    
+    }
+    
+    @keyframes tilt300 {
+        from{
+    
+            transform: rotate(0deg);
+    
+        }
+    
+        to{
+    
+            transform: rotate(300deg);
+    
+        }
+    }
+    .animation .gay .arrow{
+    
+        animation: tilt180 1s ease-in-out 4.5s forwards;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    
+    }
+    
+    @keyframes tilt180 {
+        to{
+    
+            transform: rotate(180deg);
+    
+        }
+    }
+    
+    .animation .gay .line{
+    
+        height: 17.5vw;
+        border-radius: 0px;
+    
+    }  
+    
+
+}
+
+.animation .name h1{
+
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-family: Poor Richard;
+    font-size: 5rem;
+    color: var(--cyan);
+    opacity: 0;
+    animation: headingAnimation 1s cubic-bezier(.78,-0.12,0,1.35) 7.2s forwards;
+}
+
+@keyframes headingAnimation{
+
+    0%{
+        opacity:0;
+        transform: translateX(-50%) scaleX(1);
+    }
+    35%{
+        opacity:100;
+        transform: translateX(-50%) scaleX(3);
+    }
+    70%{
+        opacity:100;
+        transform: translateX(-50%) scaleX(1);
+    }
+    100%{
+        opacity: 100;
+    }
+
+}
+.animation .love .halflove{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: 10vh;
+    opacity: 0;
+    
+    
+}
+.animation .love .halflove:nth-child(1){
+    
+    animation: halflove_l .8s ease-in 6s;
+    
+}
+.animation .love .halflove:nth-child(2){
+    
+    animation: halflove_r .8s ease-in 6s;
+
+
+}
+
+@keyframes halflove_l {
+
+    0%{
+        opacity: 0;
+        transform: translate(-200%, -50%);
+    }
+    70%{
+        opacity: 100;
+        transform: translate(-100%, -50%);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(-100%, -50%);
+    }
+    
+}
+@keyframes halflove_r {
+    
+    0%{
+        opacity: 0;
+        transform: translate(50%, -50%);
+    }
+    70%{
+        opacity: 100;
+        transform: translate(0%, -50%);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(0%, -50%);
+    }
+
+}
+
+.animation .love .crackedl{
+
+    animation: cracked_l 2s 6.8s;
+    transform-origin: bottom right;
+    
+}
+.animation .love .crackedr{
+    
+    animation: cracked_r 2s 6.8s;
+    transform-origin: bottom left;
+
+}
+
+@keyframes cracked_l {
+
+    0%{
+        opacity: 100;
+        transform: translate(-85%, -50%);
+    }
+    25%{
+        opacity: 100;
+        transform: translate(-85%, -50%) rotate(-15deg);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(-85%, -50%) rotate(-15deg);
+    }
+    
+}
+@keyframes cracked_r {
+    
+    0%{
+        opacity: 100;
+        transform: translate(-15%, -50%);
+    }
+    25%{
+        opacity: 100;
+        transform: translate(-15%, -50%) rotate(15deg);
+    }
+    100%{
+        opacity: 100;
+        transform: translate(-15%, -50%) rotate(15deg);
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .animation .name h1{
+        font-size: 3rem;
+    }
+    .animation .love .halflove{
+
+        height: 7.5vh;
+        
+        
+    }
+  }
