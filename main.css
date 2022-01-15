@@ -266,7 +266,7 @@ body{
 
     .animation .rainbow{
 
-        background-image: url("colorpatch.png");
+        background-image: url("assets/imgs/colorpatch.png");
         background-size: 12rem;
         background-repeat: repeat;
         width:100%;
