@@ -2,6 +2,15 @@
     --main: #FFA1B4;
     --cyan: #00D2D2;
   }
+
+@font-face {
+    font-family: 'poor_richardregular';
+    src: url('assets/fonts/poorich.woff2') format('woff2'), 
+            url('assets/fonts/poorich.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
   
 
 body{
@@ -23,7 +32,7 @@ body{
 
 .animation .rainbow{
 
-    background-image: url("colorpatch.png");
+    background-image: url("assets/imgs/colorpatch.png");
     background-size: 20rem;
     background-repeat: repeat;
     width:100%;
