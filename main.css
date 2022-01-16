@@ -507,13 +507,8 @@ body{
     transform: translateX(-50%);
     z-index: 10;
     font-family: poor_richardregular;
-<<<<<<< HEAD
     font-size: 6rem;
     color: var(--peach);
-=======
-    font-size: 5rem;
-    color: var(--cyan);
->>>>>>> 75fc4ce8ba6a6479d784e3407f08497154d7419c
     opacity: 0;
     animation: headingAnimation 1s cubic-bezier(.78,-0.12,0,1.35) 6s forwards;
 }
